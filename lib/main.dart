@@ -55,6 +55,11 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             const Text('Abdoooo'),
             const Text('manaaar'),
+            const Text('manaaar'),
+            const Text('manaaar'),
+            const Text('manaaar'),
+            const Text('manaaar'),
+            const Text('aaaaaa'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
