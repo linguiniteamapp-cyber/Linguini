@@ -60,6 +60,9 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text('manaaar'),
             const Text('manaaar'),
             const Text('aaaaaa'),
+            const Text('Abdoooo'),
+            const Text('Abdoooo'),
+            const Text('Abdoooo'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
