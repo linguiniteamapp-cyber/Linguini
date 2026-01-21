@@ -1,11 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:linguini_app/otp_temp.dart';
-=======
-import 'otp_temp.dart';
->>>>>>> 5415e926f778a0ee950eceeb084830ccddb96f8d
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
