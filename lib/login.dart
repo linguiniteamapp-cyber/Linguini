@@ -264,7 +264,7 @@ class _LoginPageState extends State<LoginPage> {
                         style: TextStyle(
                           color: Colors.black54,
                           fontFamily: 'Almarai',
-                          fontSize: 16,
+                          fontSize: 15,
                         ),
                       ),
                       TextButton(
@@ -283,7 +283,7 @@ class _LoginPageState extends State<LoginPage> {
                             color: Color(0xffF7931E),
                             fontFamily: 'Almarai',
                             fontWeight: FontWeight.bold,
-                            fontSize: 16,
+                            fontSize: 15,
                           ),
                         ),
                       ),
