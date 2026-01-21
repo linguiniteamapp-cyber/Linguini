@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'signup_temp.dart';
+import 'login.dart';
 
 class ChooseAccountTypePage extends StatelessWidget {
   const ChooseAccountTypePage({super.key});
@@ -12,6 +13,33 @@ class ChooseAccountTypePage extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         backgroundColor: const Color(0xFFF2F2F2),
+        appBar: AppBar(
+          backgroundColor: const Color(0xFFF2F2F2),
+          elevation: 0,
+          automaticallyImplyLeading: false,
+          actions: [
+            
+            SizedBox(
+              width: 70, // مساحة لمس واضحة
+              child: IconButton(
+                icon: const Icon(
+                  Icons.arrow_forward, // اتجاه صح للشمال
+                  color: Color(0xFF1b4a58),
+                  size: 35,
+                ),
+                onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LoginPage(),
+                      ),
+                    );
+                  },
+              ),
+            ),
+          ],
+    ),
+
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(24),
@@ -55,6 +83,7 @@ class ChooseAccountTypePage extends StatelessWidget {
                   subtitle: 'طلب وجبات جاهزة',
                   icon: Icons.person,
                   onTap: () {
+                    
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -63,7 +92,7 @@ class ChooseAccountTypePage extends StatelessWidget {
                     );
                   },
                 ),
-
+                
                 const SizedBox(height: 20),
 
                 /// Chef Card
@@ -76,18 +105,39 @@ class ChooseAccountTypePage extends StatelessWidget {
                 ),
 
                 const Spacer(),
-
-                TextButton(
-                  onPressed: () => Navigator.pop(context),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("ديك حساب بالفعل؟",style: 
+                    TextStyle(
+                      color: Color(0xFF1B4B59),
+                      fontFamily: 'Almarai',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14
+                    )
+                    ),
+                     TextButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LoginPage(),
+                      ),
+                    );
+                  },
                   child: const Text(
-                    'لديك حساب بالفعل؟ تسجيل الدخول',
+                    'تسجيل الدخول',
                     style: TextStyle(
                       color: Color(0xffF7931E),
                       fontFamily: 'Almarai',
                       fontWeight: FontWeight.bold,
+                        fontSize: 14
                     ),
                   ),
                 ),
+                  ],
+                )
+               
               ],
             ),
           ),
