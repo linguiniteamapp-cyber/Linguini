@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'otp_temp.dart';
-=======
 import 'package:linguini_app/choose_account.dart';
 import 'package:linguini_app/login.dart';
-import 'OTP.dart';
->>>>>>> f02aeb89fdf064bbee6e6d037d02189695f98f1f
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ChooseAccountTypePage(),
+      home: OtpPage(),
     );
   }
 }
