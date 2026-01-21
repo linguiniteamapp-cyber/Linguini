@@ -47,7 +47,6 @@ class _OtpPageState extends State<OtpPage> {
       return;
     }
 
-    // TODO: اربط هنا API التحقق
     debugPrint('OTP Code: $otpCode');
   }
 
@@ -256,7 +255,7 @@ class _OtpPageState extends State<OtpPage> {
                     ),),
                     TextButton(
                   onPressed: () {
-                    // TODO: إعادة إرسال OTP
+                 
                   },
                   
                   child:
