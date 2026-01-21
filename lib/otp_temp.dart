@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:linguini_app/choose_account.dart';
-import 'package:linguini_app/login.dart';
 
 class OtpPage extends StatefulWidget {
   const OtpPage({super.key});
@@ -62,31 +60,18 @@ class _OtpPageState extends State<OtpPage> {
           elevation: 0,
           automaticallyImplyLeading: false,
           actions: [
-            
-            SizedBox(
-              width: 70, // مساحة لمس واضحة
+            Padding(
+              padding: const EdgeInsets.all(20.0),
               child: IconButton(
-                icon: const Icon(
-                  Icons.arrow_forward, // اتجاه صح للشمال
-                  color: Color(0xFF1b4a58),
-                  size: 35,
+                icon: const Icon(Icons.arrow_forward, color: Color(0xFF1b4a58),
+                size: 35,
                 ),
-                onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ChooseAccountTypePage(),
-                      ),
-                    );
-                  },
+                onPressed: () => Navigator.of(context).pop(),
               ),
             ),
           ],
-    ),
-
-      body: SafeArea(
-        child: SingleChildScrollView(
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+        ),
+        body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(24),
             child: Column(
@@ -255,10 +240,9 @@ class _OtpPageState extends State<OtpPage> {
 
                   children: [
                     Text("لم يصلك الرمز؟" ,style: TextStyle(
+                      fontSize: 18,
                       color: Colors.black54,
-                      fontFamily: 'Almarai',
-                      fontWeight: FontWeight.bold,
-                      fontSize: 14
+                      fontFamily: 'inter',
                     ),),
                     TextButton(
                   onPressed: () {
@@ -270,9 +254,9 @@ class _OtpPageState extends State<OtpPage> {
                     'إعادة إرسال الرمز',
                     style: TextStyle(
                       color: Color(0xffF7931E),
-                      fontFamily: 'Almarai',
+                      fontFamily: 'inter',
                       fontWeight: FontWeight.bold,
-                        fontSize: 14
+                      fontSize: 18,
                     ),
                   ),
                 ),
@@ -284,7 +268,6 @@ class _OtpPageState extends State<OtpPage> {
           ),
         ),
       ),
-    ),
     );
   }
 }
