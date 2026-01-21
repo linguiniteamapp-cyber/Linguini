@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:linguini_app/login.dart';
 
 class OtpPage extends StatefulWidget {
   const OtpPage({super.key});
@@ -67,7 +68,15 @@ class _OtpPageState extends State<OtpPage> {
                 icon: const Icon(Icons.arrow_forward, color: Color(0xFF1b4a58),
                 size: 35,
                 ),
-                onPressed: () => Navigator.of(context).pop(),
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const LoginPage(),
+                    ),
+                  );
+                },
+
               ),
             ),
           ],
