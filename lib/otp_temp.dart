@@ -1,13 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
-import 'package:linguini_app/choose_account.dart';
-import 'package:linguini_app/login.dart';
->>>>>>> 6d4812663451a9d36452c14c80012d74b0020819
 
 class OtpPage extends StatefulWidget {
   const OtpPage({super.key});
@@ -68,54 +60,18 @@ class _OtpPageState extends State<OtpPage> {
           elevation: 0,
           automaticallyImplyLeading: false,
           actions: [
-            
-            SizedBox(
-              width: 70, // مساحة لمس واضحة
+            Padding(
+              padding: const EdgeInsets.all(20.0),
               child: IconButton(
-                icon: const Icon(
-                  Icons.arrow_forward, // اتجاه صح للشمال
-                  color: Color(0xFF1b4a58),
-                  size: 35,
+                icon: const Icon(Icons.arrow_forward, color: Color(0xFF1b4a58),
+                size: 35,
                 ),
-<<<<<<< Updated upstream
-                onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ChooseAccountTypePage(),
-                      ),
-                    );
-                  },
-              ),
-            ),
-          ],
-=======
-<<<<<<< HEAD
                 onPressed: () => Navigator.of(context).pop(),
               ),
             ),
           ],
         ),
         body: SafeArea(
-=======
-                onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ChooseAccountTypePage(),
-                      ),
-                    );
-                  },
-              ),
-            ),
-          ],
->>>>>>> Stashed changes
-    ),
-
-      body: SafeArea(
-        child: SingleChildScrollView(
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
->>>>>>> 6d4812663451a9d36452c14c80012d74b0020819
           child: Padding(
             padding: const EdgeInsets.all(24),
             child: Column(
@@ -284,10 +240,9 @@ class _OtpPageState extends State<OtpPage> {
 
                   children: [
                     Text("لم يصلك الرمز؟" ,style: TextStyle(
+                      fontSize: 18,
                       color: Colors.black54,
-                      fontFamily: 'Almarai',
-                      fontWeight: FontWeight.bold,
-                      fontSize: 14
+                      fontFamily: 'inter',
                     ),),
                     TextButton(
                   onPressed: () {
@@ -299,9 +254,9 @@ class _OtpPageState extends State<OtpPage> {
                     'إعادة إرسال الرمز',
                     style: TextStyle(
                       color: Color(0xffF7931E),
-                      fontFamily: 'Almarai',
+                      fontFamily: 'inter',
                       fontWeight: FontWeight.bold,
-                        fontSize: 14
+                      fontSize: 18,
                     ),
                   ),
                 ),
