@@ -1,5 +1,7 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'signUP.dart';
+import 'signup_temp.dart';
 
 class ChooseAccountTypePage extends StatelessWidget {
   const ChooseAccountTypePage({super.key});
@@ -70,7 +72,6 @@ class ChooseAccountTypePage extends StatelessWidget {
                   subtitle: 'بيع وجباتك المنزلية',
                   icon: Icons.restaurant,
                   onTap: () {
-                    // TODO: Chef Sign Up
                   },
                 ),
 
