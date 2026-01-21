@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'signUP.dart';
+import 'signup_temp.dart';
 
 class ChooseAccountTypePage extends StatelessWidget {
   const ChooseAccountTypePage({super.key});
