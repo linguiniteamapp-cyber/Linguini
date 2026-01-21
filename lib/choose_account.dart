@@ -66,9 +66,9 @@ class ChooseAccountTypePage extends StatelessWidget {
 
                 /// Chef Card
                 _AccountCard(
-                  title: 'حساب طاهٍ',
+                  title: 'حساب شيف',
                   subtitle: 'بيع وجباتك المنزلية',
-                  icon: Icons.restaurant,
+                  icon: Icons.restaurant_menu,
                   onTap: () {
                     // TODO: Chef Sign Up
                   },

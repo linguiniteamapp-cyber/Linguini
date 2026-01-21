@@ -80,7 +80,9 @@ class _OtpPageState extends State<OtpPage> {
             ),
           ],
         ),
-        body: SafeArea(
+      body: SafeArea(
+        child: SingleChildScrollView(
+        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
           child: Padding(
             padding: const EdgeInsets.all(24),
             child: Column(
@@ -277,6 +279,7 @@ class _OtpPageState extends State<OtpPage> {
           ),
         ),
       ),
+    ),
     );
   }
 }
