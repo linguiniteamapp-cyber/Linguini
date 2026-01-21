@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:linguini_app/choose_account.dart';
+import 'package:linguini_app/login.dart';
 
 class SignUpUserPage extends StatefulWidget {
   const SignUpUserPage({super.key});
@@ -20,17 +22,29 @@ class _SignUpUserPageState extends State<SignUpUserPage> {
         appBar: AppBar(
           backgroundColor: const Color(0xFFF2F2F2),
           elevation: 0,
+          automaticallyImplyLeading: false,
           actions: [
-            IconButton(
-              icon: const Icon(
-                Icons.arrow_forward,
-                color: Color(0xFF1b4a58),
-                size: 30,
+            
+            SizedBox(
+              width: 70, // مساحة لمس واضحة
+              child: IconButton(
+                icon: const Icon(
+                  Icons.arrow_forward, // اتجاه صح للشمال
+                  color: Color(0xFF1b4a58),
+                  size: 35,
+                ),
+                onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ChooseAccountTypePage(),
+                      ),
+                    );
+                  },
               ),
-              onPressed: () => Navigator.pop(context),
             ),
           ],
-        ),
+    ),
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(24),
@@ -75,7 +89,7 @@ class _SignUpUserPageState extends State<SignUpUserPage> {
                     ),
                   ),
 
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 0),
 
                   /// Terms
                   Row(
@@ -89,11 +103,19 @@ class _SignUpUserPageState extends State<SignUpUserPage> {
                           });
                         },
                       ),
-                      const Expanded(
+                      TextButton(
+                    onPressed: () {
+                      // TODO: Forgot password
+                    },
                         child: Text(
                           'أوافق على الشروط والأحكام',
                           style: TextStyle(
                             fontFamily: 'Almarai',
+                            color: Color(0xffF7931E),
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.underline,
+                            decorationColor: Color(0xffF7931E),
                           ),
                         ),
                       ),
@@ -123,6 +145,70 @@ class _SignUpUserPageState extends State<SignUpUserPage> {
                       ),
                     ),
                   ),
+                  
+                const SizedBox(height: 6),
+
+                  InkWell(
+                  onTap: () {
+                    // TODO: Google Sign In
+                  },
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 24),
+                    padding: const EdgeInsets.all(4),
+                    height: 65,
+                    width: 65,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black12,
+                          blurRadius: 6,
+                        ),
+                      ],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: Image.asset(
+                        'images/Google_Favicon_2025.png',
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      'لديك حساب بالفعل؟',
+                      style: TextStyle(
+                        color: Colors.black54,
+                        fontFamily: 'Almarai',
+                        fontSize: 16,
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        // TODO: Go to Register
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginPage(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        'تسجيل الدخول',
+                        style: TextStyle(
+                          color: Color(0xffF7931E),
+                          fontFamily: 'Almarai',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
                 ],
               ),
             ),
@@ -162,9 +248,25 @@ class _SignUpUserPageState extends State<SignUpUserPage> {
           ),
           filled: true,
           fillColor: Colors.white,
-          contentPadding: const EdgeInsets.symmetric(
-            horizontal: 16,
-            vertical: 14,
+          enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(14),
+        borderSide: const BorderSide(
+          color: Colors.transparent,
+        ),
+      ),
+
+      /// 🔥 Border عند الوقوف على الحقل
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(14),
+        borderSide: const BorderSide(
+          color: Color(0xffF7931E), // الأصفر
+          width: 2,
+        ),
+      ),
+
+      contentPadding: const EdgeInsets.symmetric(
+        horizontal: 16,
+        vertical: 14,
           ),
         ),
       ),

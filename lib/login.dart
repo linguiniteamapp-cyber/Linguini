@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'otp_temp.dart';
+import 'package:linguini_app/choose_account.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -27,12 +28,12 @@ class _LoginPageState extends State<LoginPage> {
           actions: [
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: IconButton(
-                icon: const Icon(Icons.arrow_forward, color: Color(0xFF1b4a58),
-                size: 35,
-                ),
-                onPressed: () => Navigator.of(context).pop(),
-              ),
+              // child: IconButton(
+              //   icon: const Icon(Icons.arrow_forward, color: Color(0xFF1b4a58),
+              //   size: 35,
+              //   ),
+              //   onPressed: () => Navigator.of(context).pop(),
+              // ),
             ),
           ],
         ),
@@ -84,14 +85,29 @@ Container(
     decoration: InputDecoration(
       labelText: 'اسم المستخدم أو البريد الإلكتروني',
       labelStyle: const TextStyle(
+        color: Color(0xFF1b4a58),
         fontFamily: 'Almarai',
       ),
       filled: true,
       fillColor: Colors.white,
-      border: OutlineInputBorder(
+
+      /// 🔸 Border العادي
+      enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(14),
-        borderSide: BorderSide.none,
+        borderSide: const BorderSide(
+          color: Colors.transparent,
+        ),
       ),
+
+      /// 🔥 Border عند الوقوف على الحقل
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(14),
+        borderSide: const BorderSide(
+          color: Color(0xffF7931E), // الأصفر
+          width: 2,
+        ),
+      ),
+
       contentPadding: const EdgeInsets.symmetric(
         horizontal: 16,
         vertical: 14,
@@ -122,13 +138,26 @@ Container(
       labelText: 'كلمة المرور',
       labelStyle: const TextStyle(
         fontFamily: 'Almarai',
+        color: Color(0xFF1b4a58)
       ),
       filled: true,
       fillColor: Colors.white,
-      border: OutlineInputBorder(
+
+      enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(14),
-        borderSide: BorderSide.none,
+        borderSide: const BorderSide(
+          color: Colors.transparent,
+        ),
       ),
+
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(14),
+        borderSide: const BorderSide(
+          color: Color(0xffF7931E),
+          width: 2,
+        ),
+      ),
+
       suffixIcon: IconButton(
         icon: Icon(
           isObscure ? Icons.visibility_off : Icons.visibility,
@@ -140,6 +169,7 @@ Container(
           });
         },
       ),
+
       contentPadding: const EdgeInsets.symmetric(
         horizontal: 16,
         vertical: 14,
@@ -264,6 +294,12 @@ Container(
                     TextButton(
                       onPressed: () {
                         // TODO: Go to Register
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ChooseAccountTypePage(),
+                          ),
+                        );
                       },
                       child: const Text(
                         'إنشاء حساب',
