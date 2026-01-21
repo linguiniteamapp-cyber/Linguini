@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:linguini_app/choose_account.dart';
 import 'package:linguini_app/login.dart';
