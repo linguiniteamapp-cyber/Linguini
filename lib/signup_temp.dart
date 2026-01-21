@@ -107,7 +107,7 @@ class _SignUpUserPageState extends State<SignUpUserPage> {
                       ),
                       TextButton(
                     onPressed: () {
-                      // TODO: Forgot password
+                      
                     },
                         child: Text(
                           'أوافق على الشروط والأحكام',
@@ -152,7 +152,6 @@ class _SignUpUserPageState extends State<SignUpUserPage> {
 
                   InkWell(
                   onTap: () {
-                    // TODO: Google Sign In
                   },
                   child: Container(
                     margin: const EdgeInsets.only(top: 24),
@@ -191,7 +190,6 @@ class _SignUpUserPageState extends State<SignUpUserPage> {
                     ),
                     TextButton(
                       onPressed: () {
-                        // TODO: Go to Register
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
