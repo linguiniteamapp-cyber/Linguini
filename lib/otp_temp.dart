@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 import 'package:linguini_app/choose_account.dart';
 import 'package:linguini_app/login.dart';
+>>>>>>> 6d4812663451a9d36452c14c80012d74b0020819
 
 class OtpPage extends StatefulWidget {
   const OtpPage({super.key});
@@ -71,6 +77,7 @@ class _OtpPageState extends State<OtpPage> {
                   color: Color(0xFF1b4a58),
                   size: 35,
                 ),
+<<<<<<< Updated upstream
                 onPressed: () {
                     Navigator.pushReplacement(
                       context,
@@ -82,11 +89,33 @@ class _OtpPageState extends State<OtpPage> {
               ),
             ),
           ],
+=======
+<<<<<<< HEAD
+                onPressed: () => Navigator.of(context).pop(),
+              ),
+            ),
+          ],
+        ),
+        body: SafeArea(
+=======
+                onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ChooseAccountTypePage(),
+                      ),
+                    );
+                  },
+              ),
+            ),
+          ],
+>>>>>>> Stashed changes
     ),
 
       body: SafeArea(
         child: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+>>>>>>> 6d4812663451a9d36452c14c80012d74b0020819
           child: Padding(
             padding: const EdgeInsets.all(24),
             child: Column(
@@ -284,7 +313,6 @@ class _OtpPageState extends State<OtpPage> {
           ),
         ),
       ),
-    ),
     );
   }
 }
