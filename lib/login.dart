@@ -1,5 +1,11 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
+import 'package:linguini_app/otp_temp.dart';
+=======
 import 'otp_temp.dart';
+>>>>>>> 5415e926f778a0ee950eceeb084830ccddb96f8d
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -150,12 +156,10 @@ Container(
 
                 const SizedBox(height: 8),
 
-                /// Forgot Password
                 Align(
                   alignment: Alignment.centerLeft,
                   child: TextButton(
                     onPressed: () {
-                      // TODO: Forgot password
                     },
                     child: const Text(
                       'نسيت كلمة المرور؟',
@@ -220,7 +224,6 @@ Container(
                 /// Google Login
                 InkWell(
                   onTap: () {
-                    // TODO: Google Sign In
                   },
                   child: Container(
                     margin: const EdgeInsets.only(top: 24),
@@ -263,7 +266,6 @@ Container(
                     ),
                     TextButton(
                       onPressed: () {
-                        // TODO: Go to Register
                       },
                       child: const Text(
                         'إنشاء حساب',

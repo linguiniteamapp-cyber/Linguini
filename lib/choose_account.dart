@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'signup_temp.dart';
 
@@ -70,7 +72,6 @@ class ChooseAccountTypePage extends StatelessWidget {
                   subtitle: 'بيع وجباتك المنزلية',
                   icon: Icons.restaurant_menu,
                   onTap: () {
-                    // TODO: Chef Sign Up
                   },
                 ),
 
