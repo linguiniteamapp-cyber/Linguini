@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:linguini_app/choose_account.dart';
 import 'package:linguini_app/login.dart';
+import 'package:linguini_app/profile_setup_1.dart';
 
 class SignUpUserPage extends StatefulWidget {
   const SignUpUserPage({super.key});
@@ -108,6 +109,13 @@ class _SignUpUserPageState extends State<SignUpUserPage> {
                       TextButton(
                     onPressed: () {
                       // TODO: Forgot password
+                      Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  const ChooseAccountTypePage(),
+                            ),
+                          );
                     },
                         child: Text(
                           'أوافق على الشروط والأحكام',
@@ -152,7 +160,6 @@ class _SignUpUserPageState extends State<SignUpUserPage> {
 
                   InkWell(
                   onTap: () {
-                    // TODO: Google Sign In
                   },
                   child: Container(
                     margin: const EdgeInsets.only(top: 24),
@@ -191,7 +198,6 @@ class _SignUpUserPageState extends State<SignUpUserPage> {
                     ),
                     TextButton(
                       onPressed: () {
-                        // TODO: Go to Register
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(

@@ -108,7 +108,7 @@ class ChooseAccountTypePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("ديك حساب بالفعل؟",style: 
+                    Text("لديك حساب بالفعل؟",style: 
                     TextStyle(
                       color: Color(0xFF1B4B59),
                       fontFamily: 'Almarai',
