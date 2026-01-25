@@ -79,7 +79,7 @@ class EmptyBasketPage extends StatelessWidget {
               ),
             ),
 
-            const Spacer(flex: 3),
+            const Spacer(flex: 2),
           ],
         ),
       ),
