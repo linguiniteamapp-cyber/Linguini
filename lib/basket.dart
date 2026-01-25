@@ -199,7 +199,7 @@ class EmptyBasketPage extends StatelessWidget {
                     color: Color(0xFFFCCB00),
                   ),
                 ),
-                SizedBox(width: 6),
+                SizedBox(width: 5),
                 Text(
                   'BASKET',
                   style: TextStyle(
