@@ -33,7 +33,7 @@ class EmptyBasketPage extends StatelessWidget {
             const Spacer(),
 
             // Basket image
-            Image.asset('assets/images/basket.png', width: 110, height: 110),
+            Image.asset('assets/images/baskettt.png', width: 110, height: 110),
 
             const SizedBox(height: 24),
 
