@@ -58,7 +58,7 @@ class EmptyBasketPage extends StatelessWidget {
             const SizedBox(height: 8),
 
             // Subtitle
-            const Text('يبدو انك لم تضف شيئًا بعد',
+            const Text('يبدو انك لم تضف شيئً بعد',
                 style: TextStyle(fontSize: 14, color: Color(0xFF6B7280))),
 
             const SizedBox(height: 32),
